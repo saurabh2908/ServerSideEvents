@@ -12,6 +12,7 @@ app.get('/stream',function(req,res){
             'Access-Control-Allow-Origin' : '*'
         });
         fs.watchFile(__dirname+'/public/score.txt', function(){
+		console.log("watch change in file every time")
             var content = fs.readFileSync(__dirname+'/public/score.txt');
             res.write('event: letdoservertalk\n');
             res.write('data:  Score.txt changed at ' + new Date().toString()+' '+content + '\n\n');
