@@ -21,7 +21,7 @@ app.get('/stream',function(req,res){
     });
 
 const listner= 1234; 
-
+console.log("listner",listner);
 app.listen(1234,()=>{
 console.log("Server Start at",listner);
 });
